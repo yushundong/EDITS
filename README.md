@@ -1,5 +1,5 @@
 # EDITS
-Open source code for paper "EDITS: Modeling and Mitigating Data Biasfor Graph Neural Networks".
+Open source code for paper "EDITS: Modeling and Mitigating Data Bias for Graph Neural Networks".
 
 ## Environment
 Experiments are carried out on a Titan RTX with Cuda 10.1. 
