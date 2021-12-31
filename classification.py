@@ -12,8 +12,6 @@ from sklearn.metrics import accuracy_score, roc_auc_score, recall_score, f1_scor
 import scipy.sparse as sp
 from utils import load_bail, load_credit, load_german, feature_norm, normalize_scipy
 from gcn import GCN
-from sage import SAGE
-from gin import GIN
 from torch_geometric.utils import dropout_adj, convert
 from tqdm import tqdm
 import warnings
