@@ -19,7 +19,7 @@ warnings.filterwarnings('ignore')
 import ctypes
 ctypes.cdll.LoadLibrary('caffe2_nvrtc.dll')
 
-torch.cuda.set_device(1)
+torch.cuda.set_device(0)
 
 # Training settings
 parser = argparse.ArgumentParser()
@@ -45,7 +45,9 @@ parser.add_argument('--dropout', type=float, default=0.05,
                     help='Dropout rate (1 - keep probability).')
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
-
+np.random.seed(10)
+torch.manual_seed(10)
+torch.cuda.manual_seed(10)
 
 
 
@@ -64,7 +66,7 @@ adj = normalize_scipy(adj)
 
 if args.preprocessed_using:
     A_debiased, features = sp.load_npz('pre_processed/A_debiased.npz'), torch.load("pre_processed/X_debiased.pt", map_location=torch.device('cpu')).cpu().float()
-    threshold_proportion = 0.012  # GCN: {credit: 0.02, german: 0.25, bail: 0.012}
+    threshold_proportion = 0.015  # GCN: {credit: 0.02, german: 0.29, bail: 0.015}
     the_con1 = (A_debiased - adj_ori).A
     the_con1 = np.where(the_con1 > np.max(the_con1) * threshold_proportion, 1 + the_con1 * 0, the_con1)
     the_con1 = np.where(the_con1 < np.min(the_con1) * threshold_proportion, -1 + the_con1 * 0, the_con1)
