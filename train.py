@@ -15,11 +15,11 @@ warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser()
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='Disables CUDA training.')
-parser.add_argument('--cuda_device', type=int, default=1,
+parser.add_argument('--cuda_device', type=int, default=0,
                     help='cuda device running on.')
 parser.add_argument('--dataset', type=str, default='bail',
                     help='a dataset from credit, german and bail.')
-parser.add_argument('--epochs', type=int, default=500,
+parser.add_argument('--epochs', type=int, default=100,
                     help='Number of epochs to train.')
 parser.add_argument('--lr', type=float, default=0.003,
                     help='Initial learning rate.')
@@ -27,6 +27,9 @@ parser.add_argument('--weight_decay', type=float, default=1e-7,
                     help='Weight decay (L2 loss on parameters).')
 args = parser.parse_known_args()[0]
 args.cuda = not args.no_cuda and torch.cuda.is_available()
+np.random.seed(10)
+torch.manual_seed(10)
+torch.cuda.manual_seed(10)
 
 def binarize(A_debiased, adj_ori, threshold_proportion):
 
