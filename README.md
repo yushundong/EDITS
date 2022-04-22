@@ -26,7 +26,23 @@ for downstream node classification task.
 ```
 python classification.py
 ```
-
+```
+****************************Before debiasing****************************
+Attribute bias : 
+Sum of all Wasserstein distance value across feature dimensions: 0.17086205277713312
+Average of all Wasserstein distance value across feature dimensions: 0.006328224176930857
+Structural bias : 
+Sum of all Wasserstein distance value across feature dimensions: 0.28068607580843574
+Average of all Wasserstein distance value across feature dimensions: 0.01039578058549762
+****************************************************************************
+100%|██████████| 1000/1000 [00:19<00:00, 51.55it/s]
+Optimization Finished!
+Total time elapsed: 19.3985s
+Delta_{SP}: 0.25681942171303873
+Delta_{EO}: 0.19327731092436973
+F1: 0.8131868131868131
+AUC: 0.7433142857142857
+```
 (2-1) Debiasing attributed network with EDITS:
 ```
 python train.py
@@ -71,7 +87,23 @@ AUC: 0.7140571428571428
 ```
 python classification.py
 ```
-
+```
+****************************Before debiasing****************************
+Attribute bias : 
+Sum of all Wasserstein distance value across feature dimensions: 0.032023121509008844
+Average of all Wasserstein distance value across feature dimensions: 0.0024633170391545264
+Structural bias : 
+Sum of all Wasserstein distance value across feature dimensions: 0.05786050779584359
+Average of all Wasserstein distance value across feature dimensions: 0.004450808291987968
+****************************************************************************
+100%|██████████| 1000/1000 [04:38<00:00,  3.59it/s]
+Optimization Finished!
+Total time elapsed: 278.3364s
+Delta_{SP}: 0.13269706500135625
+Delta_{EO}: 0.10837075709847321
+F1: 0.8175731450059617
+AUC: 0.734433504547214
+```
 (2-1) Debiasing attributed network with EDITS:
 ```
 python train.py
@@ -79,13 +111,13 @@ python train.py
 ```
 ****************************Before debiasing****************************
 Attribute bias : 
-Sum of all Wasserstein distance value across feature dimensions: 0.03643643322694976
-Average of all Wasserstein distance value across feature dimensions: 0.0028028025559192126
+Sum of all Wasserstein distance value across feature dimensions: 0.032023121509008844
+Average of all Wasserstein distance value across feature dimensions: 0.0024633170391545264
 Structural bias : 
-Sum of all Wasserstein distance value across feature dimensions: 0.06161969755359447
-Average of all Wasserstein distance value across feature dimensions: 0.004739976734891882
+Sum of all Wasserstein distance value across feature dimensions: 0.05786050779584359
+Average of all Wasserstein distance value across feature dimensions: 0.004450808291987968
 ****************************************************************************
-100%|██████████| 500/500 [05:36<00:00,  1.49it/s]
+100%|██████████| 500/500 [05:37<00:00,  1.48it/s]
 Preprocessed datasets saved.
 ```
 (2-2) Carry out node classification task with the output of EDITS (set args.preprocessed_using as 1):
@@ -101,13 +133,13 @@ Structural bias :
 Sum of all Wasserstein distance value across feature dimensions: 0.035380875298436004
 Average of all Wasserstein distance value across feature dimensions: 0.003931208366492889
 ****************************************************************************
-100%|██████████| 1000/1000 [04:54<00:00,  3.39it/s]
+100%|██████████| 1000/1000 [04:49<00:00,  3.45it/s]
 Optimization Finished!
-Total time elapsed: 294.6079s
-Delta_{SP}: 0.10104353944645594
-Delta_{EO}: 0.07581226764553184
-F1: 0.8187980945401246
-AUC: 0.7305588243155289
+Total time elapsed: 289.9188s
+Delta_{SP}: 0.1008967181280005
+Delta_{EO}: 0.0756249315646026
+F1: 0.8186898763169949
+AUC: 0.7305752326134218
 ```
 
 ## Log example for node classification on Bail
@@ -125,13 +157,13 @@ Structural bias :
 Sum of all Wasserstein distance value across feature dimensions: 0.01976526986139568
 Average of all Wasserstein distance value across feature dimensions: 0.0010980705478553154
 ****************************************************************************
-100%|██████████| 1000/1000 [01:23<00:00, 12.02it/s]
+100%|██████████| 1000/1000 [01:27<00:00, 11.39it/s]
 Optimization Finished!
-Total time elapsed: 83.2267s
-Delta_{SP}: 0.0820449428186098
-Delta_{EO}: 0.0566079463128194
-F1: 0.7816419612314709
-AUC: 0.8678896786694952
+Total time elapsed: 87.7692s
+Delta_{SP}: 0.07623766006332078
+Delta_{EO}: 0.05521238465644773
+F1: 0.7910319057200345
+AUC: 0.8713191402411585
 ```
 
 (2-1) Debiasing attributed network with EDITS:
