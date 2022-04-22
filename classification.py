@@ -33,7 +33,7 @@ parser.add_argument('--preprocessed_using', type=int, default=0,
                     help='1 and 0 represent utilizing and not utilizing the preprocessed results.')
 parser.add_argument('--dataset', type=str, default='bail',
                     help='a dataset from credit, german and bail.')
-parser.add_argument('--epochs', type=int, default=1000,  # german: 1300 stability purpose
+parser.add_argument('--epochs', type=int, default=1000,
                     help='Number of epochs to train.')
 parser.add_argument('--lr', type=float, default=0.001,
                     help='Initial learning rate.')
