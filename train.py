@@ -19,7 +19,7 @@ parser.add_argument('--cuda_device', type=int, default=0,
                     help='cuda device running on.')
 parser.add_argument('--dataset', type=str, default='bail',
                     help='a dataset from credit, german and bail.')
-parser.add_argument('--epochs', type=int, default=100,
+parser.add_argument('--epochs', type=int, default=100,  # bail: 100; others: 500.
                     help='Number of epochs to train.')
 parser.add_argument('--lr', type=float, default=0.003,
                     help='Initial learning rate.')
