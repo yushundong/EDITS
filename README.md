@@ -1,5 +1,5 @@
 # EDITS
-Open source code for "EDITS: Modeling and Mitigating Data Bias for Graph Neural Networks".
+Open-source code for "EDITS: Modeling and Mitigating Data Bias for Graph Neural Networks".
 
 ## Citation
 
