@@ -1,6 +1,20 @@
 # EDITS
 Open source code for "EDITS: Modeling and Mitigating Data Bias for Graph Neural Networks".
 
+## Citation
+
+If you find it useful, please cite our paper. Thank you!
+
+```
+@inproceedings{dong2022edits,
+  title={Edits: Modeling and mitigating data bias for graph neural networks},
+  author={Dong, Yushun and Liu, Ninghao and Jalaian, Brian and Li, Jundong},
+  booktitle={Proceedings of the ACM Web Conference 2022},
+  pages={1259--1269},
+  year={2022}
+}
+```
+
 ## Environment
 Experiments are carried out on a Titan RTX with Cuda 10.1. 
 
